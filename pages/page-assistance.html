@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistance - ProtX</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/logo.png" alt="ProtX logo"></a>
+        </div>
+        <nav>
+            <a href="../index.html">Accueil</a>
+            <a href="./page-produits.html">Produits</a>
+            <a href="./page-assistance.html">Assistance</a>
+        </nav>
+
+        <div class="se-connecter">
+        </div>
+    </header>
+
+    <main class="assistance-body">
+        <section class="assistance-formulaire">
+            <h2>Demande d'assistance</h2>
+            <p>Remplissez ce formulaire pour que nous puissions vous recommander le produit le mieux adapté à vos besoins.</p>
+        
+            <form action="#" method="post">
+                <label for="age">Âge <span class="etoile">*</span></label>
+                <input type="number" id="age" name="age" required min="10" max="100">
+        
+                <label for="taille">Taille (cm) <span class="etoile">*</span></label>
+                <input type="number" id="taille" name="taille" required>
+        
+                <label for="poids">Poids (kg) <span class="etoile">*</span></label>
+                <input type="number" id="poids" name="poids" required>
+        
+                <label for="objectif">Quel est votre objectif ?</label>
+                <select id="objectif" name="objectif" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="perte-de-poids">Perte de poids</option>
+                    <option value="prise-de-masse">Prise de masse</option>
+                    <option value="maintien-de-forme">Maintien de la forme</option>
+                    <option value="amélioration-performance">Amélioration des performances</option>
+                </select>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contactez-nous : contact.protx@gmail.com | Téléphone : 05 12 34 56 78</p>
+        <p>2025 © <strong>ProtX</strong> - Tous droits réservés</p>
+    </footer>
+
+
+    
+    
+    <script src="../js/scripts.js"></script>
+
+</body>
+</html>

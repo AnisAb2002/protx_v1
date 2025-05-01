@@ -1,0 +1,774 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 0px 5%;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+header .logo{
+    width: 10%;
+}
+header .logo img{
+    height: 30px;
+}
+header a {
+    color: #c1c1c1;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+nav{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    margin: 0 15px;
+}
+header a:hover{
+    color: white;
+}
+header .se-connecter{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+header .se-connecter img{
+    height: 30px;
+    margin: 0 10px;
+}
+
+
+
+
+/* Section d'accueil */
+.accueil {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* 110% de la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+
+.accueil-items {
+    position: relative;
+    z-index: 1;
+}
+
+.accueil-items h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -5px;
+}
+.accueil-items img{
+    width: 50%;
+}
+.accueil-items p {
+    font-size: 1.1rem;
+    margin-top: 100px;
+}
+
+
+
+/* Description */
+
+.description {
+    width: 100%;
+    height: 110vh; /* 110% de la hauteur de l'écran */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+.description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Opacité réduite */
+}
+.description h2 {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 40px; /* Espacement entre le titre et le contenu */
+    letter-spacing: 1px;
+    color: white;
+    z-index: 2; /* Assure qu'il est au-dessus de l'overlay */
+}
+.description-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    z-index: 2; /* Assure qu'il est bien visible */
+}
+.description .text {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.description ul {
+    list-style: none;
+}
+.description ul li {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    padding-left: 25px;
+    position: relative;
+}
+.description ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #FFD700; /* Couleur dorée pour un effet premium */
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+/* Meilleurs produits */
+.meilleurs-produits {
+    width: 100%;
+    min-height: 110vh; /* Ajustement de la hauteur */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 100px 0;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+.meilleurs-produits-titre {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Conteneur des produits */
+.meilleurs-produits-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 98%;
+}
+
+/* Style des produits */
+.meilleur {
+    width: 250px; /* Taille uniforme des produits */
+    background: rgba(255, 255, 255, 0.15);
+    padding: 35px 0px;
+    margin: 10px 2px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Effet au survol */
+.meilleur:hover {
+    background-color: rgba(180, 180, 180, 0.15);;
+    transform: translateY(-10px);
+}
+
+/* Style des images */
+.meilleur img {
+    width: 190px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de zoom léger au survol */
+.meilleur:hover img {
+    transform: scale(1.08);
+}
+.produit-titre {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.btn-apercu {
+    position: relative;
+    top: 15px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-apercu:hover {
+    background: rgba(97, 97, 97, 0.5);
+    color: rgb(238, 238, 238);
+    transform: translateX(-50%) scale(1.1);
+}
+
+.btn-produits {
+    position: relative;
+    top: 50px;
+    transform: translateX(-50%);
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol du bouton */
+.btn-produits:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(-50%) scale(1.1);
+    color: white;
+}
+
+
+
+
+
+/* à propos ProtX */
+.a-propos {
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+.a-propos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+.a-propos h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: white;
+}
+.a-propos p {
+    margin-bottom: 25px;
+}
+.valeurs {
+    margin : 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 40px;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    z-index: 2; /* Assure qu'il est bien visible */
+}
+.valeurs h3{
+    margin: 30px 0 0;
+}
+.valeurs ul {
+    list-style: none;
+}
+.valeurs ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+}
+.valeurs ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style de la page de connexion */
+.login-body{
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.login-form {
+    width: 350px;
+    margin-top: 100px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+}
+.login-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+.login-form input {
+    width: 94%;
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-form .btn {
+    width: 40%;
+    padding: 10px;
+    background-color: #3498db;
+    color: rgb(209, 209, 209);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-form .btn:hover {
+    background-color: #2980b9;
+    color: white;
+}
+.login-form p {
+    margin-top: 15px;
+}
+
+.login-form a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+.etoile{
+    color: red;
+}
+
+
+
+
+
+
+/* Style de la page d'inscription */
+.register-body{
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.register-form {
+    width: 350px;
+    margin: 100px 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+}
+.register-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+.register-form input {
+    width: 94%;
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.register-form .btn {
+    margin-top: 10px;
+    width: 40%;
+    padding: 10px;
+    background-color: #3498db;
+    color: rgb(209, 209, 209);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.register-form .btn:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.register-form p {
+    margin-top: 15px;
+}
+
+.register-form a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/*Style de la page produits*/
+.page-produits-body{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-produits-accueil {
+    text-align: center;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    color: white;
+}
+.page-produits-accueil p{
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+}
+.categorie {
+    margin-bottom: 60px;
+    color: white;
+    text-align: center;
+    border: solid rgba(95, 95, 95, 0.15) 2px;
+    border-radius: 7px;
+    max-width: 98%;
+}
+
+.categorie h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.produits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    padding: 0 10px 30px;
+}   
+.produit {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 35px 0px;
+    border-radius: 10px;
+    width: 250px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.produit:hover {
+    background-color: rgba(180, 180, 180, 0.15);
+    transform: translateY(-10px);
+}
+
+.produit img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 190px;
+    transition: transform 0.3s ease;
+}
+.produit:hover img {
+    transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+/*Page d'un produit*/
+.page-produit {
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+  
+.produit-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.produit-image{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    transition: scale 0.3s ease;
+}
+.produit-image:hover{
+    scale: 1.05;
+}
+.produit-image img {
+    width: 350px;
+    border-radius: 10px;
+    transition: scale 0.4s ease;
+}
+.produit-image:hover img{
+    scale : 1.15;
+}
+  
+.produit-details {
+    max-width: 500px;
+}
+
+.produit-info{
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1px 10px 15px;
+    margin: 0 0 5px;
+}
+.produit-info h2 {
+    font-size: 2rem;
+}
+  
+.description-produit {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 5px 10px ;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.prix {
+    font-size: 1.1rem;
+}
+.commande {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    flex-wrap: wrap;
+}
+  
+.quantite-selector {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.quantite-selector input{
+    width: 60px;
+    text-align: center;
+    border: none;
+    font-size: 1.05rem;
+    padding: 8px 0;
+    color: black;
+    background-color: white;
+}
+.quantite-selector button {
+    width: 35px;
+    background-color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+  
+.quantite-selector button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.btn-panier {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+  
+.btn-panier:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+  
+/* Produits similaires */
+.similaires {
+    margin-top: 40px;
+    text-align: center;
+}
+  
+.similaires h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+  
+.similaires-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+  
+.produit-similaire {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+  
+.produit-similaire img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.produit-similaire p {
+    margin-bottom: 10px;
+}
+
+
+
+/*Assistance */
+.assistance-body{
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.assistance-formulaire {
+    padding: 20px;
+    margin: 100px 0;
+    background: white;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.assistance-formulaire label{
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+.assistance-formulaire h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.assistance-formulaire p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.assistance-formulaire form {
+    width: 400px;
+    text-align: center;
+}
+
+.assistance-formulaire input,
+.assistance-formulaire select {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.assistance-formulaire button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 40%;
+    background-color: #3498db;
+    color: rgb(209, 209, 209);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.assistance-formulaire button:hover {
+    background-color: #2980b9;
+    color: white;
+}
